@@ -8,6 +8,7 @@
 html {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .header {
@@ -92,9 +93,41 @@ html {
   }
 }
 .menu-section {
+  & > h1 {
+    margin-top: 10rem;
+    font-size: 5.2rem;
+    text-align: center;
+  }
+
   .card-menu {
+    margin: 6rem auto;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    max-width: 65%;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr;
+    border-radius: 11px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 35%;
+
+    overflow: hidden;
+  }
+  .image-card-menu {
+    grid-column: 2;
+    grid-row: 1;
+    background-size: cover;
+    height: 25rem;
+    width: 27rem;
+  }
+  .menu-text {
+    grid-column: 1/2;
+    grid-row: 1;
+    padding: 3.2rem;
+    h2 {
+      font-size: 3.2rem;
+    }
+    p {
+      margin-top: 1.2rem;
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
   }
 }

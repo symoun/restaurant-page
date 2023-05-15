@@ -1,6 +1,12 @@
+function moveToMenu() {
+  const menuSection = document.querySelector("#menu");
+  menuSection.scrollIntoView({ behavior: "smooth" });
+}
+
 export default (function AboutSection() {
   const section = document.createElement("section");
   section.classList.add("about-section");
+  section.setAttribute("id", "about");
   const div = document.createElement("div");
   section.appendChild(div);
   const p = document.createElement("p");
@@ -13,6 +19,8 @@ export default (function AboutSection() {
   const button = document.createElement("button");
   button.classList.add("btn-menu");
   button.textContent = "Menu";
+  button.onclick = moveToMenu;
+
   div.appendChild(button);
   return section;
 })();
